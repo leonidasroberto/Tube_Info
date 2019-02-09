@@ -3,7 +3,7 @@ proc=$(find config > /dev/null 2>&1 ; echo "$?")
 
 if [ $proc != 0 ]
 then
-echo -e "\n\033[01;31m Nenhum Canal ainda não configurado!\n"
+echo -e "\n\033[01;31m Nenhum Canal configurado!\n"
 read -p " Digite o link socialblade aqui ---> " conf
 matrix=$(curl $conf > /dev/null 2>&1 ; echo "$?")
 
@@ -21,11 +21,11 @@ exit
 else
 config=$(cat config)
 
-curl $config > nando 2>&1 | echo -e "\n\033[01;32m Carregando Resultados...\033[m"
+curl $config > info 2>&1 | echo -e "\n\033[01;32m Carregando Resultados...\033[m"
 
 sleep 2
 
-cont=$(cat nando | grep Subscribers | awk -F'>' '{print $6}' | tr '</span' ' ')
+cont=$(cat info | grep Subscribers | awk -F'>' '{print $6}' | tr '</span' ' ')
 
 ini=$(cat nando | grep " - " | awk -F'$' '{print $2}' | tail -2 | awk '{print $1}')
 fin=$(cat nando | grep " - " | awk -F'$' '{print $3}' | tail -2 | awk '{print $1}')
