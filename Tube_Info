@@ -21,15 +21,15 @@ exit
 else
 config=$(cat config)
 
-curl $config > info 2>&1 | echo -e "\n\033[01;32m Carregando Resultados...\033[m"
+curl $config > .info 2>&1 | echo -e "\n\033[01;32m Carregando Resultados...\033[m"
 
 sleep 2
 
-cont=$(cat info | grep Subscribers | awk -F'>' '{print $6}' | tr '</span' ' ')
+cont=$(cat .info | grep Subscribers | awk -F'>' '{print $6}' | tr '</span' ' ')
 
-ini=$(cat info | grep " - " | awk -F'$' '{print $2}' | tail -2 | awk '{print $1}')
-fin=$(cat info | grep " - " | awk -F'$' '{print $3}' | tail -2 | awk '{print $1}')
-nome=$(cat info | grep "YouTube Progress Graphs for" | awk -F'for' '{print $2}' | tr '</h2>' ' ')
+ini=$(cat .info | grep " - " | awk -F'$' '{print $2}' | tail -2 | awk '{print $1}')
+fin=$(cat .info | grep " - " | awk -F'$' '{print $3}' | tail -2 | awk '{print $1}')
+nome=$(cat .info | grep "YouTube Progress Graphs for" | awk -F'for' '{print $2}' | tr '</h2>' ' ')
 
 echo -e "\n \033[01;35mNome do Canal --->\033[32m $nome\033[m"
 
