@@ -33,7 +33,7 @@ nome=$(cat nando | grep "YouTube Progress Graphs for" | awk -F'for' '{print $2}'
 
 echo -e "\n \033[01;35mNome do Canal --->\033[32m $nome\033[m"
 
-echo -e "\n \033[01;35mNúmero atual de inscritos do Canar --->\033[32m $cont\n\033[m"
+echo -e "\n \033[01;35mNúmero atual de inscritos do Canal --->\033[32m $cont\n\033[m"
 
 echo -e " \033[01;35mGanho por mês de --->\033[32m R$ $ini a $fin Dólares\n\033[m"
 
