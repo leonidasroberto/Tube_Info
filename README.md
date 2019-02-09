@@ -11,4 +11,4 @@ Script em shell para coletar informações de canais do Youtube.
 <p>Pesquise o Canal que desejado no site e cole a URL no campo abaixo</p>
 <img src="https://i.imgur.com/Qnv1UAb.png" alt="Tela onde colar url" />
 <p>Exempo de Resultado:</p>
-<img src="https://i.imgur.com/AANrife.png" alt="Tela onde colar url" />
+<img src="https://i.imgur.com/8rtC65q.png" alt="Tela onde colar url" />
